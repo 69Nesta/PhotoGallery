@@ -1,0 +1,14 @@
+# Mac Os
+.DS_store
+
+
+# Custom Converter
+converter/export/**
+converter/images/**
+
+# Custom Site
+website/images.json
+
+website/assets/original/**
+website/assets/preview/**
+website/assets/small/**

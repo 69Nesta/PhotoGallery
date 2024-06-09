@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#view_list {
+    background-color: #E0C9A6;
+    height: 100vh;
+}
+
+#view_list>.title {
+    color: red;
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    height: 17vh;
+    padding-top: 20px;
+}
+
+#view_list>.main {
+    background-color: white;
+    border-radius: 20px;
+    min-height: 83vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+#view_list>.main>.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 24px;
+}
+
+#view_list>.main>.header>div {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#view_list>.main>.header>a {
+    color: #A2A2A2;
+    text-decoration: none;
+}
+
+.image_stacked {
+    height: 42vw;
+    width: 42vw;
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.images {
+    margin-top: 14px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 42vw);
+    grid-gap: 4vw;
+}
+
+.images.loader {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20dvh;
+}
+
+.loader>img {
+    width: 20vw;
+}
+
+#view_list>.footer {
+    height: 100px;
+    /* padding-top: 60px; */
+    padding-bottom: 60px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mcp>img {
+    width: 60vw;
+}
+
+.mentions {
+    color: #A2A2A2;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.mentions.mcp {
+    margin-top: 40px;
+}
+
+.mentions.me {
+    margin-top: 3px;
+}
+
+
+
+.footer>.mentions>a {
+    color: #A2A2A2;
+}
+
+#view_one {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#view_one>.header {
+    display: flex;
+    justify-content: center;
+
+    height: 10vh;
+    width: 100vw;
+}
+
+#view_one>.header>.nav_view {
+    position: absolute;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 10vh;
+}
+
+
+#view_one>.header>.nav_images {
+    display: flex;
+    align-self: center;
+
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#view_one>.header>.nav_images>input {
+    border: none;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Poppins', 'sans-serif';
+    text-align: end;
+
+    padding: 2px 8px;
+    width: 60px;
+    height: 35px;
+
+}
+
+#view_one>.header>.nav_images>div {
+    margin-left: 5px;
+    align-self: center;
+}
+
+#view_one>.header>.nav_view>svg {
+    padding: 10px;
+    cursor: pointer;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+#view_one>.main,
+#view_one>.main>img {
+    height: 75dvh;
+    width: 100vw;
+    object-fit: contain;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 20px;
+}
+
+.controls>button {
+    border: none;
+
+    cursor: pointer;
+
+    align-self: center;
+
+    touch-action: manipulation
+}
+
+.download {
+    background-color: #FFC83C;
+
+    font-size: 20px;
+
+    padding: 10px 22px;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0px 25px;
+}
+
+.download>a {
+    text-decoration: none;
+    color: black;
+}
+
+.download>a>svg {
+    padding-left: 10px;
+}
+
+.control {
+    background-color: white;
+
+    padding: 5px 15px;
+}
+
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* For Pc */
+@media screen and (min-width: 780px) {
+    #view_list>.main>.images {
+        grid-template-columns: repeat(6, 15vw);
+
+        grid-gap: 1vw;
+    }
+
+    .image_stacked {
+        height: 15vw;
+        width: 15vw;
+    }
+
+    #view_list>.main {
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    #view_list>.main>.images {
+        grid-template-columns: repeat(4, 21.5vw);
+
+        grid-gap: 2vw;
+    }
+
+    .image_stacked {
+        height: 21.5vw;
+        width: 21.5vw;
+    }
+
+    #view_list>.main {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAL 2024 - MDL</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BAL 2024 - MDL">
+    <meta property="og:url" content="https://bal2024.whatsweb.fr/">
+    <meta property="og:description" content="BAL 2024 - MDL
+    Motion Car Production x Romeo Petit
+    ">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="src/boot.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="view_list" style="display: none;">
+            <div class="title">
+                Casino<br />
+                Royale Party
+            </div>
+            <div class="main">
+                <div class="header">
+                    <div>
+                        Photos
+                    </div>
+                    <a href="?view=true" class="link">See one by one <svg width="7" height="12" viewBox="0 0 7 12"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.71429 11L6 5.99999L1.71429 1" stroke="#B9B9B9" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div id="stackedImages" class="images loader">
+                    <!-- Images added by js -->
+                    <img src="assets/loading.gif" alt="loadder">
+                </div>
+            </div>
+            <div class="footer">
+                <div class="mentions mcp">Images by @<a href="https://motioncarproduction.myportfolio.com/">Motion Car Production</a></div>
+                <div class="mentions me">WebSite by @<a href="https://instagram.com/romeo.ptit/">Romeo Petit</a></div>
+            </div>
+        </div>
+        <div id="view_one" style="display: none;">
+            <div class="header">
+                <div class="nav_view">
+                    <svg onclick="goToListView()" width="17" height="31" viewBox="0 0 17 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.875 2.82733L2.125 15.6273L14.875 28.4273" stroke="black" stroke-width="4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <form class="nav_images" onsubmit="changeImage(event)">
+                    <input id="photoselect" type="number" value="1" max="85" min="1" minlength="1" maxlength="3"
+                        size="3" aria-setsize="3" />
+                    <div id="compteur">&ThickSpace;/ XXX</div>
+                </form>
+            </div>
+            <div class="main">
+                <img id="image_single_view" src="" alt="image">
+            </div>
+            <div class="controls">
+                <button class="control left">
+                    <svg width="19" height="38" viewBox="0 0 19 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_13_27)">
+                            <path d="M16.625 3.35748L2.375 18.5575L16.625 33.7574" stroke="black" stroke-width="5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_13_27">
+                                <rect width="19" height="38" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </button>
+                <button class="download poppins-medium">
+                    <a id="download_a" href="" download>
+                        Download
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_13_50)">
+                                <path
+                                    d="M0.944443 12.1765V13.8765C0.944443 14.3274 1.14345 14.7598 1.49769 15.0786C1.85192 15.3974 2.33237 15.5765 2.83333 15.5765H14.1667C14.6676 15.5765 15.148 15.3974 15.5023 15.0786C15.8566 14.7598 16.0556 14.3274 16.0556 13.8765V12.1765M3.77778 7.07653L8.5 11.3265M8.5 11.3265L13.2222 7.07653M8.5 11.3265V1.12653"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_13_50">
+                                    <rect width="17" height="17" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </button>
+                <button class="control right">
+                    <svg width="19" height="38" viewBox="0 0 19 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_13_25)">
+                            <path d="M2.375 34.6425L16.625 19.4425L2.375 4.24258" stroke="black" stroke-width="5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_13_25">
+                                <rect width="19" height="38" fill="white" transform="matrix(-1 0 0 -1 19 38)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+
+</html>
