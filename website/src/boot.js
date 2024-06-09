@@ -39,7 +39,6 @@ function loadImage() {
     $('#photoselect').val(`${currentImage + 1}`)
     $('#download_a').attr('href', window.images[currentImage].originalPath)
 
-    // print(currentImage+1 + ' / ' +  window.images.length)
 
     preload()
 }
@@ -50,7 +49,6 @@ function goToListView() {
 
     loadImages()
 
-    // setScroll
     const scrollTop = localStorage.getItem('scroll')
     if (scrollTop)
         window.scrollTo(0, scrollTop)
