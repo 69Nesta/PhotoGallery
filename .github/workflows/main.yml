@@ -1,0 +1,30 @@
+name: 🚀 Deploy website on push
+
+on: 
+  push:
+    branches:
+      - main  # Adjust this as needed
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Change working directory to subfolder
+      run: cd website
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.host }}
+        username: ${{ secrets.username }}
+        password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/README.md
