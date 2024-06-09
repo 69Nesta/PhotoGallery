@@ -2,6 +2,9 @@
 
 ## Photos converter (/converter)
 Put all of your photos in folder **images**!
+```bash
+converter/images/<your images>
+```
 Now you can install dependencies : 
 ```bash
 pip install -r requirements.txt
